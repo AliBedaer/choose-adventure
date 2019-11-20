@@ -3,7 +3,6 @@ package main
 import (
 	"cyoaweb/cyoa"
 	"flag"
-	"fmt"
 	"log"
 	"os"
 )
@@ -24,6 +23,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	tpl := "templates/stories.html"
 
-	fmt.Println(story)
+	cyoa.ParseTemplate(tpl,story)
+
 }
